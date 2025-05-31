@@ -1,13 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
   ],
   "rewrites": [
     {
@@ -15,14 +9,10 @@
       "destination": "/assets/:path*"
     },
     {
-      "source": "/projects/images/:path*",
-      "destination": "/images/:path*"
-    },
-    {
       "source": "/projects/:path*",
-      "destination": "https://idanlevian-projects.vercel.app/idanlevian/$1"
+      "destination": "/index.html"
     }
   ],
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false
 }
