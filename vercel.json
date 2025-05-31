@@ -20,7 +20,7 @@
     },
     {
       "source": "/idanlevian-projects/:path*",
-      "destination": "/index.html"
+      "destination": "https://idanlevian-projects.vercel.app/idanlevian/$1"
     }
   ],
   "cleanUrls": true,
