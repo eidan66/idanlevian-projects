@@ -1,18 +1,26 @@
 {
-    "$schema": "https://openapi.vercel.sh/vercel.json",
-    "builds": [
-      { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
-    ],
-    "rewrites": [
-      {
-        "source": "/idanlevian-projects/assets/:path*",
-        "destination": "/assets/:path*"
-      },
-      {
-        "source": "/idanlevian-projects/:path*",
-        "destination": "/index.html"
-      }
-    ],
-    "cleanUrls": false,
-    "trailingSlash": false
-  }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/idanlevian-projects/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/idanlevian-projects/images/:path*",
+      "destination": "/images/:path*"
+    },
+    {
+      "source": "/idanlevian-projects/:path*",
+      "destination": "/idanlevian-projects/index.html"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
