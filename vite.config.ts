@@ -7,9 +7,9 @@ import vercel from 'vite-plugin-vercel';
 
 
 export default defineConfig({
-  base: '/idanlevian-projects/',
+  base: '/projects/',
   plugins: [react(), tailwindcss(),vercel({
-    basePath: '/idanlevian-projects',
+    basePath: '/projects',
     includeFiles: true,
   }),
 ],

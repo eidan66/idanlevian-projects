@@ -11,15 +11,15 @@
   ],
   "rewrites": [
     {
-      "source": "/idanlevian-projects/assets/:path*",
+      "source": "/projects/assets/:path*",
       "destination": "/assets/:path*"
     },
     {
-      "source": "/idanlevian-projects/images/:path*",
+      "source": "/projects/images/:path*",
       "destination": "/images/:path*"
     },
     {
-      "source": "/idanlevian-projects/:path*",
+      "source": "/projects/:path*",
       "destination": "https://idanlevian-projects.vercel.app/idanlevian/$1"
     }
   ],
