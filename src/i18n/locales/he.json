@@ -1,0 +1,18 @@
+{
+    "projects.title": "הפרויקטים שלי",
+    "projects.description": "עיינו בעבודות האחרונות שלי",
+    "projects.live": "לצפייה",
+    "projects.code": "קוד",
+    "projects.search": "חיפוש פרויקטים...",
+    "projects.filter": "סינון לפי טכנולוגיה",
+    "projects.all": "כל הטכנולוגיות",
+    "projects.loading": "טוען פרויקטים...",
+    "projects.notFound": "לא נמצאו פרויקטים התואמים את החיפוש.",
+    "projects.footer.1": "© {{year}} עידן לויאן. כל הזכויות שמורות.",
+    "projects.footer.2": "נוצר באהבה.",
+    "projects.technologies": "טכנולוגיות",
+    "projects.liveDemo": "צפייה",
+    "projects.source": "קוד מקור",
+    "layout.switchHebrew": "החלף לעברית",
+    "layout.switchEnglish": "החלף לאנגלית"
+  }

@@ -1,0 +1,18 @@
+{
+    "projects.title": "My Projects",
+    "projects.description": "Explore my recent work",
+    "projects.live": "Live",
+    "projects.code": "GitHub",
+    "projects.search": "Search projects...",
+    "projects.filter": "Filter by tech",
+    "projects.all": "All Technologies",
+    "projects.loading": "Loading Projects...",
+    "projects.notFound": "No projects found matching your criteria.",
+    "projects.footer.1": "© {{year}} Idan Levian. All rights reserved.",
+    "projects.footer.2": "Crafted with passion and love.",
+    "projects.technologies": "Technologies",
+    "projects.liveDemo": "Live Demo",
+    "projects.source": "Source Code",
+    "layout.switchHebrew": "Switch to Hebrew",
+    "layout.switchEnglish": "Switch to English"
+  }
