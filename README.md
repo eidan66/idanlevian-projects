@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# Idan Levian — Projects Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the open-source portfolio projects viewer of [idanlevian.com](https://idanlevian.com)!
 
-Currently, two official plugins are available:
+This page displays a beautifully animated, fully responsive showcase of selected development projects. It is designed to be embedded inside the main portfolio site and supports both Hebrew and English languages, including RTL (Right-To-Left) layout support.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✨ Clean, responsive UI with Tailwind CSS
+- 🌐 Multilingual (Hebrew 🇮🇱 / English 🇬🇧) via i18n
+- 📁 Local image & project data handling
+- 💅 Styled Components support
+- 🔄 Dynamic filtering, animations, and project cards
+- 🌙 Dark theme design with accessible contrast
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠 Tech Stack
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [i18next](https://www.i18next.com/)
+- [Lucide React](https://lucide.dev/)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── components/         # Shared reusable components
+├── entities/           # Project data types and mock data
+├── i18n/               # Translation files (en.json, he.json)
+├── pages/              # Main project page layout
+├── assets/             # Local static images (logos, covers)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧪 Running Locally
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+yarn install
+yarn dev
 ```
+
+---
+
+## ✍️ Author
+
+Built with ❤️ by [Idan Levian](https://idanlevian.com)
+
+---
+
+## 📄 License
+
+MIT
