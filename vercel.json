@@ -20,7 +20,7 @@
     },
     {
       "source": "/idanlevian-projects/:path*",
-      "destination": "/idanlevian-projects/index.html"
+      "destination": "/index.html"
     }
   ],
   "cleanUrls": true,
