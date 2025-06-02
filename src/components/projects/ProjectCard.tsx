@@ -72,7 +72,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </div>
       </div>
-      <div className={`p-6 pt-0 mt-auto flex items-center gap-3 border-t border-slate-700/50 ${project.liveUrl && project.githubUrl ? 'justify-end' : 'justify-center'}`}>
+      <div className={`p-6 mt-auto flex items-center gap-3 border-t border-slate-700/50 ${project.liveUrl && project.githubUrl ? 'justify-end' : 'justify-center'}`}>
           {project.liveUrl && (
             <Button 
               variant="outline" 

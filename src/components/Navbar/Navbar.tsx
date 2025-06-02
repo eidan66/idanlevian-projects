@@ -22,7 +22,7 @@ export const Navbar = ()=>{
                 <img
                   src={logo}
                   alt="Idan Levian logo"
-                  className="h-18 w-auto p-1 rounded-md"
+                  className="h-16 w-auto p-1 rounded-md"
                 />
               </a>
             </div>

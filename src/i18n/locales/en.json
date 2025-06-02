@@ -13,6 +13,6 @@
     "projects.technologies": "Technologies",
     "projects.liveDemo": "Live Demo",
     "projects.source": "Source Code",
-    "layout.switchHebrew": "Switch to Hebrew",
-    "layout.switchEnglish": "Switch to English"
+    "layout.switchHebrew": "עברית",
+    "layout.switchEnglish": "English"
   }
