@@ -9,6 +9,10 @@
       "destination": "/assets/:path*"
     },
     {
+      "source": "/projects/images/:path*",
+      "destination": "/images/:path*"
+    },
+    {
       "source": "/projects/:path*",
       "destination": "/index.html"
     }
