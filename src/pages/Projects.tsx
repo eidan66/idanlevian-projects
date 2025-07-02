@@ -4,11 +4,7 @@ import type { ProjectType } from '@/entities/Project';
 import HeroSection from '@/components/portfolio/HeroSection';
 import ProjectsGallery from '@/components/portfolio/ProjectsGallery';
 import ProjectModal from '@/components/portfolio/ProjectModal';
-import LeadFormModal from '@/components/portfolio/LeadFormModal';
 import WhatsAppButton from '@/components/portfolio/WhatsAppButton';
-import Footer from '@/components/shared/Footer';
-import type { LeadFormData } from '@/components/portfolio/LeadFormModal';
-import emailjs from 'emailjs-com';
 import { Helmet } from 'react-helmet-async';
 import { useAppContext } from '@/components/Providers';
 
@@ -45,14 +41,9 @@ function mapProjectTypeToUIProject(p: ProjectType): UIProject {
   };
 }
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || process.env.EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || process.env.EMAILJS_TEMPLATE_ID;
-const EMAILJS_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID || process.env.EMAILJS_USER_ID;
-
 export default function Projects() {
   const [projects, setProjects] = useState<UIProject[]>([]);
   const [selectedProject, setSelectedProject] = useState<UIProject | null>(null);
-  const [showLeadForm, setShowLeadForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const { t, language } = useAppContext() as { t: (key: string) => string; language: string };
 
@@ -68,31 +59,6 @@ export default function Projects() {
       console.error('Error loading projects:', error);
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const handleLeadSubmit = async (data: LeadFormData): Promise<boolean> => {
-    try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          name: data.name || '-',
-          email: data.email || '-',
-          phone: data.phone || '-',
-          project_type: data.project_type || '-',
-          message: data.message || '-',
-          budget_range: data.budget_range || '-',
-          timeline: data.timeline || '-',
-          status: data.status || '-',
-        },
-        EMAILJS_USER_ID
-      );
-      setShowLeadForm(false);
-      return true;
-    } catch (error) {
-      console.error('Error submitting lead:', error);
-      return false;
     }
   };
 
@@ -143,7 +109,7 @@ export default function Projects() {
         `}</script>
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white">
-        <HeroSection onLeadFormOpen={() => setShowLeadForm(true)} />
+        <HeroSection onLeadFormOpen={() => window.dispatchEvent(new Event('open-lead-form'))} />
         
         <ProjectsGallery 
           projects={projects}
@@ -158,15 +124,7 @@ export default function Projects() {
           />
         )}
 
-        {showLeadForm && (
-          <LeadFormModal
-            onClose={() => setShowLeadForm(false)}
-            onSubmit={handleLeadSubmit}
-          />
-        )}
-
         <WhatsAppButton />
-        <Footer onContactClick={() => setShowLeadForm(true)} />
       </div>
     </>
   );

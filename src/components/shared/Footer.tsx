@@ -75,7 +75,7 @@ export default function Footer({ onContactClick }: FooterProps) {
                   {t('footer.myProjects')}
                 </Link>
                 <Link 
-                  to="/about" 
+                  to="about" 
                   className="block hover:text-white cursor-pointer transition-colors"
                 >
                   {t('footer.aboutMe')}

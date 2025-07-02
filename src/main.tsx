@@ -12,6 +12,7 @@ import PWAUpdateToast from './components/PWAUpdateToast';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 if (GA_MEASUREMENT_ID) {
@@ -38,6 +39,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <PWAUpdateToast />
       <HelmetProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <AppProvider>
             <GoogleAnalytics />
             <Routes>

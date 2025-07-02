@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useAppContext } from '@/components/Providers';
-import Footer from '../components/shared/Footer';
 import ContactForm from '../components/about/ContactForm';
 import { Code, Smartphone, Award, Coffee, Heart, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -210,10 +209,6 @@ export default function About() {
           onSubmit={handleContactFormSubmit}
         />)
       )}
-      {/* Footer */}
-      <footer role="contentinfo">
-        <Footer onContactClick={() => setShowContactForm(true)} />
-      </footer>
     </div>
   );
 }

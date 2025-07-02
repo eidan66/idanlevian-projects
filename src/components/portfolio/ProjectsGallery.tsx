@@ -73,20 +73,20 @@ export default function ProjectsGallery({ projects, isLoading, onProjectSelect }
               />
             </div>
 
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-2 flex-wrap sm:flex-row flex-col w-full sm:w-auto">
               {categories.map(category => (
                 <Button
                   key={category.id}
                   variant={selectedCategory === category.id ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(category.id as ProjectCategory | 'all')}
-                  className={`rounded-lg transition-all ${
+                  className={`rounded-lg transition-all w-full sm:w-auto flex flex-row items-center gap-2 justify-start sm:justify-center ${
                     selectedCategory === category.id 
                       ? 'btn-primary' 
                       : 'btn-outline-custom'
                   }`}
                 >
-                  <Filter className="w-3 h-3 mr-1" />
+                  <Filter className="w-3 h-3" />
                   {category.label}
                 </Button>
               ))}
