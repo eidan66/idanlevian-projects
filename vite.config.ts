@@ -67,7 +67,8 @@ export default defineConfig({
               expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24 * 30 }
             }
           }
-        ]
+        ],
+        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024, // 8 MB
       }
     }),
     trailingSlashRedirect(),
