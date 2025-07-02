@@ -12,6 +12,7 @@ export type ProjectType = {
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  category: 'web-development' | 'landing-pages' | 'mobile-apps';
 };
 
 const projectData: ProjectType[] = [
@@ -29,7 +30,8 @@ const projectData: ProjectType[] = [
     techStack: ['React', 'TypeScript', 'Styled-Components', 'Material-UI', 'Storybook', 'ApexCharts.js', 'Leaflet'],
     liveUrl: 'https://eidan66.github.io/Budget-Application/', 
     githubUrl: 'https://github.com/eidan66/Budget-Application',
-    featured: false
+    featured: false,
+    category: 'web-development',
   },
   {
     id: '5',
@@ -46,6 +48,7 @@ const projectData: ProjectType[] = [
     liveUrl: 'https://digital-conf-luih.vercel.app/',
     githubUrl: 'https://github.com/eidan66/DigitalConf',
     featured: true,
+    category: 'landing-pages',
   },
   {
     id: '6',
@@ -62,6 +65,7 @@ const projectData: ProjectType[] = [
     liveUrl: 'https://producti-flow.vercel.app/',
     githubUrl: 'https://github.com/eidan66/ProductiFlow',
     featured: true,
+    category: 'landing-pages',
   },
   {
     id: '7',
@@ -78,6 +82,7 @@ const projectData: ProjectType[] = [
     githubUrl: 'https://github.com/eidan66/FlashGadgets',
     liveUrl: 'https://flash-gadgets.vercel.app/',
     featured: true,
+    category: 'landing-pages',
   },
   {
     id: '8',
@@ -94,6 +99,7 @@ const projectData: ProjectType[] = [
     githubUrl: 'https://github.com/eidan66/ConsultBiz',
     liveUrl: 'https://consult-biz.vercel.app/',
     featured: true,
+    category: 'landing-pages',
   },
   {
     id: '1',
@@ -105,11 +111,12 @@ const projectData: ProjectType[] = [
       en: 'A mobile-first app for wedding guests to upload and share live photos.',
       he: 'אפליקציה מותאמת לניידים לאורחי חתונה לשיתוף תמונות בלייב.',
     },
-    imageUrl: `${import.meta.env.BASE_URL}images/weddingAlbum/weddingAlbum.jpg`,
+    imageUrl: `${import.meta.env.BASE_URL}images/weddingAlbum/weddingAlbum.png`,
     techStack: ['React', 'TypeScript', 'Styled-Components','Amazon S3'],
     liveUrl: 'https://idanlevian.com/wedding-album',
     githubUrl: 'https://github.com/eidan66/wedding-album',
     featured: true,
+    category: 'web-development',
   },
   {
     id: '2',
@@ -125,6 +132,7 @@ const projectData: ProjectType[] = [
     techStack: ['React', 'TypeScript', 'Tailwindcss'],
     liveUrl: 'https://algosensus.com/',
     featured: false,
+    category: 'landing-pages',
   },
   {
     id: '3',
@@ -140,6 +148,23 @@ const projectData: ProjectType[] = [
     techStack: ['React', 'Vite','TypeScript', 'Styled-Components'],
     liveUrl: 'https://idanlevian.com',
     featured: true,
+    category: 'web-development',
+  },
+  {
+    id: '9',
+    name: {
+      en: 'Photo Spark',
+      he: 'פוטו ספארק',
+    },
+    description: {
+      en: 'A modern web application for photographers to showcase, share, and manage their photo portfolios online.',
+      he: 'אפליקציית ווב מודרנית לצלמים להצגת, שיתוף וניהול תיקי עבודות צילום אונליין.',
+    },
+    imageUrl: `${import.meta.env.BASE_URL}images/photoSpark/photoSpark.png`,
+    techStack: ['React', 'TypeScript', 'Tailwindcss'],
+    liveUrl: 'https://photo-spark.vercel.app/',
+    featured: true,
+    category: 'landing-pages',
   },
 ];
 

@@ -1,6 +1,11 @@
 {
-  "short_name": "Idan",
-  "name": "Idan Levian | Frontend & Mobile Developer",
+  "name": "Idan Levian Portfolio",
+  "short_name": "Idan Portfolio",
+  "start_url": "/projects/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "description": "Portfolio of Idan Levian, Full Stack Developer specializing in React, Node.js, and modern web/mobile solutions.",
   "icons": [
     {
       "src": "/favicon/favicon.ico",
@@ -62,9 +67,5 @@
       "type": "image/png",
       "sizes": "1200x1200"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#000000"
+  ]
 }

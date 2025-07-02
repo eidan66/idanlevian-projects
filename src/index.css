@@ -1,2 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
+
+:root {
+  --primary: 79 70 229;
+  --primary-foreground: 255 255 255;
+  --secondary: 139 92 246;
+  --background: 15 23 42;
+  --foreground: 248 250 252;
+  --muted: 30 41 59;
+  --muted-foreground: 148 163 184;
+  --border: 51 65 85;
+  --card: 30 41 59;
+  --card-foreground: 248 250 252;
+}
+
+* {
+  font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Assistant', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hover-lift {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgb(79 70 229) 0%, rgb(139 92 246) 100%);
+  border: none;
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+.btn-outline-custom {
+  background: #334155;
+  border: 1px solid #475569;
+  color: #f1f5f9 !important;
+  transition: all 0.2s ease-out;
+}
+
+.btn-outline-custom:hover {
+  background: #475569;
+  border-color: #64748b;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+body {
+  background: #0f172a;
+  color: #f8fafc;
+}
